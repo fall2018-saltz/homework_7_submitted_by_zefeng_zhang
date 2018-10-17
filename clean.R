@@ -21,7 +21,6 @@ str(cleanCensus)
 arrests<-USArrests
 str(arrests)
 
-
 # Create the merged dataframe 
 arrests$stateName <- row.names(arrests)
 totalData<-merge (cleanCensus,arrests, by=c("stateName"))
