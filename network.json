@@ -23,6 +23,16 @@
             ],
             "source": "clean.R",
             "target": "data.csv"
+        },
+        {
+            "ports": [
+                {
+                    "output": "colCoMap",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "colCoMap.png"
         }
     ],
     "nodes": [
@@ -41,6 +51,6 @@
             "name": "colCoMap.png"
         }
     ],
-    "updated_at": "2018-10-17 21:37:56",
+    "updated_at": "2018-10-17 21:40:57",
     "url": "https://github.com/fall2018-saltz/homework_7_submitted_by_zefeng_zhang"
 }
