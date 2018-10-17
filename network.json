@@ -1,0 +1,95 @@
+{
+    "collaborators": [
+        "zefeng"
+    ],
+    "created_at": "2018-10-17 21:20:35",
+    "edges": [
+        {
+            "ports": [
+                {
+                    "input": "raw_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "scprc_est_2017_18_pop_res.csv",
+            "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "clean_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "clean.R",
+            "target": "data.csv"
+        },
+        {
+            "ports": [
+                {
+                    "output": "colCoMap",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "colCoMap.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "colCoMapMur",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "CoMapMur.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "colCoMapPopPoint",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "colCoMapPopPoint.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "colCoMapPopZoom",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "colCoMapPopZoom.png"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "scprc_est_2017_18_pop_res.csv"
+        },
+        {
+            "assigned_to": "zefeng",
+            "name": "clean.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "data.csv"
+        },
+        {
+            "name": "colCoMap.png"
+        },
+        {
+            "name": "CoMapMur.png"
+        },
+        {
+            "name": "colCoMapPopPoint.png"
+        },
+        {
+            "name": "colCoMapPopZoom.png"
+        }
+    ],
+    "updated_at": "2018-10-17 21:42:21",
+    "url": "https://github.com/fall2018-saltz/homework_7_submitted_by_zefeng_zhang"
+}
