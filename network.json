@@ -43,6 +43,16 @@
             ],
             "source": "clean.R",
             "target": "CoMapMur.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "colCoMapPopPoint",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "colCoMapPopPoint.png"
         }
     ],
     "nodes": [
@@ -67,6 +77,6 @@
             "name": "colCoMapPopPoint.png"
         }
     ],
-    "updated_at": "2018-10-17 21:41:51",
+    "updated_at": "2018-10-17 21:41:58",
     "url": "https://github.com/fall2018-saltz/homework_7_submitted_by_zefeng_zhang"
 }
