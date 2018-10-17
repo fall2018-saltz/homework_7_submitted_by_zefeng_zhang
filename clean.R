@@ -26,6 +26,8 @@ arrests$stateName <- row.names(arrests)
 totalData<-merge (cleanCensus,arrests, by=c("stateName"))
 str(totalData)
 View(totalData)
+
+
 # 2)Add the area of each state, and the center of each state, to the merged dataframe
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
 
@@ -34,7 +36,7 @@ View(stateinfo)
 dfMerge <- merge(totalData, stateInfo,by="stateName")
 View(dfMerge)
 
-
+#IT DOESN'T ALLOW ME TO INSTALL ANY PACKAGE 
 
 #Step B: Generate a color coded map
 #3)	Create a color coded map, based on the area of the state 
