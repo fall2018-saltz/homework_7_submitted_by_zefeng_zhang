@@ -75,8 +75,11 @@
         },
         {
             "name": "colCoMapPopPoint.png"
+        },
+        {
+            "name": "colCoMapPopZoom.png"
         }
     ],
-    "updated_at": "2018-10-17 21:41:58",
+    "updated_at": "2018-10-17 21:42:14",
     "url": "https://github.com/fall2018-saltz/homework_7_submitted_by_zefeng_zhang"
 }
