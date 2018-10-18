@@ -39,7 +39,6 @@ stateInfo <- data.frame("stateName"=state.name, "Area"=state.area,"Center"=state
 dfMerge <- merge(totalData, stateInfo,by="stateName")
 #View(dfMerge)
 
-
 #Step B: Generate a color coded map
 #3)	Create a color coded map, based on the area of the state 
 
@@ -51,7 +50,7 @@ colCoMap <- colCoMap+  geom_map(map = us, aes(fill=dfMerge$Area))
 colCoMap <- colCoMap + expand_limits(x = us$long, y = us$lat)
 colCoMap <- colCoMap + coord_map() +ggtitle("Basic Map of USA")
 colCoMap
-#View(colCoMap)
+
 # Step C: Create a color shaded map of the U.S. based on the Murder rate for each state 
 
 #4)	Repeat step B, but color code the map based on the murder rate of each state.
