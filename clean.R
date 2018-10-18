@@ -3,6 +3,9 @@
 
 #Load and Merge datasets
 #1)	Read in the census dataset
+library(ggplot2)
+library(ggmap)
+library(maps)
 readStates<-function()
 {
 states<-raw_data
@@ -25,7 +28,7 @@ str(arrests)
 arrests$stateName <- row.names(arrests)
 totalData<-merge (cleanCensus,arrests, by=c("stateName"))
 str(totalData)
-View(totalData)
+#View(totalData)
 
 
 # 2)Add the area of each state, and the center of each state, to the merged dataframe
