@@ -3,6 +3,9 @@
 
 #Load and Merge datasets
 #1)	Read in the census dataset
+library(ggplot2)
+
+
 readStates<-function()
 {
 states<-raw_data
