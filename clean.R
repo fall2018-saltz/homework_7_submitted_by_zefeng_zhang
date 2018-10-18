@@ -59,8 +59,8 @@ us <- map_data("state")
 #View(us)
 
 dfMerge$stateName<- tolower(dfMerge$stateName)
-colCoMap <- ggplot(dfMerge, aes(map_id =stateName))  
-colCoMapMur  <- colCoMap  +  geom_map(map = us, aes(fill=dfMerge$Murder)) 
+colCoMap2 <- ggplot(dfMerge, aes(map_id =stateName))  
+colCoMapMur  <- colCoMap2  +  geom_map(map = us, aes(fill=dfMerge$Murder)) 
 colCoMapMur  <- colCoMapMur  + expand_limits(x = us$long, y = us$lat)
 colCoMapMur  <- colCoMapMur   + coord_map() +ggtitle("Murder Rate of Each State")
 colCoMapMur 
