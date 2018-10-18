@@ -3,6 +3,9 @@
 
 #Load and Merge datasets
 #1)	Read in the census dataset
+library(ggplot2)
+library(ggmap)
+library(maps)
 readStates<-function()
 {
 states<-raw_data
@@ -25,16 +28,16 @@ str(arrests)
 arrests$stateName <- row.names(arrests)
 totalData<-merge (cleanCensus,arrests, by=c("stateName"))
 str(totalData)
-View(totalData)
+#View(totalData)
 
 
 # 2)Add the area of each state, and the center of each state, to the merged dataframe
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
 
 stateInfo <- data.frame("stateName"=state.name, "Area"=state.area,"Center"=state.center)
-View(stateinfo)
+#View(stateinfo)
 dfMerge <- merge(totalData, stateInfo,by="stateName")
-View(dfMerge)
+#View(dfMerge)
 
 #IT DOESN'T ALLOW ME TO INSTALL ANY PACKAGE 
 
@@ -49,14 +52,13 @@ colCoMap <- colCoMap+  geom_map(map = us, aes(fill=dfMerge$Area))
 colCoMap <- colCoMap + expand_limits(x = us$long, y = us$lat)
 colCoMap <- colCoMap + coord_map() +ggtitle("Basic Map of USA")
 colCoMap
-
-
+#View(colCoMap)
 # Step C: Create a color shaded map of the U.S. based on the Murder rate for each state 
 
 #4)	Repeat step B, but color code the map based on the murder rate of each state.
 
 us <- map_data("state")
-View(us)
+#View(us)
 
 dfMerge$stateName<- tolower(dfMerge$stateName)
 colCoMap <- ggplot(dfMerge, aes(map_id =stateName))  
