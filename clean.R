@@ -35,9 +35,9 @@ str(totalData)
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
 
 stateInfo <- data.frame("stateName"=state.name, "Area"=state.area,"Center"=state.center)
-View(stateinfo)
+#View(stateinfo)
 dfMerge <- merge(totalData, stateInfo,by="stateName")
-View(dfMerge)
+#View(dfMerge)
 
 #IT DOESN'T ALLOW ME TO INSTALL ANY PACKAGE 
 
@@ -59,7 +59,7 @@ colCoMap
 #4)	Repeat step B, but color code the map based on the murder rate of each state.
 
 us <- map_data("state")
-View(us)
+#View(us)
 
 dfMerge$stateName<- tolower(dfMerge$stateName)
 colCoMap <- ggplot(dfMerge, aes(map_id =stateName))  
